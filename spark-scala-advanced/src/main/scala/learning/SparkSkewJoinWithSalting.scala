@@ -43,7 +43,7 @@ object SparkSkewJoinWithSalting {
     // 3) Make a join with the salted column
     val result = usersWithSaltedCol.join(ordersWithSaltedCol, $"user_join_key" === $"order_join_key")
 
-    result.select("id","order_id").show()
+    result.show()
   }
 
 }
